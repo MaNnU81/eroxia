@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eroxia", "eroxia\eroxia.csproj", "{AC6DE749-D668-45B1-B3AC-97E0D66C82BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC6DE749-D668-45B1-B3AC-97E0D66C82BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6DE749-D668-45B1-B3AC-97E0D66C82BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6DE749-D668-45B1-B3AC-97E0D66C82BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6DE749-D668-45B1-B3AC-97E0D66C82BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25FF5583-B962-4C5E-AE2B-0E7005556901}
+	EndGlobalSection
+EndGlobal
