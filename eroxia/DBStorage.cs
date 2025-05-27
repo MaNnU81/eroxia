@@ -9,9 +9,9 @@ using Npgsql;
 namespace eroxia
 {
 
-    internal class DBStorage: IStorage
+    internal class DBStorage : IStorage
     {
-        public static string postgresConnectionString = "Host=localhost;Port=5432;Username=postgres;Password=superpippo;Database=eroxia";
+        public static string postgresConnectionString = "Host=localhost;Port=5432;Username=postgres;Password=Diva;Database=eroxia";  //cambia password in superpippo
 
         public async Task<List<Product>> GetAllProductsFromDB()
         {
@@ -68,5 +68,29 @@ namespace eroxia
             return employees;
         }
 
+        public async Task DeleteEmployeeFromDB(string fiscalCode)
+        {
+            var dataSourceBuilder = new Npgsql.NpgsqlDataSourceBuilder(postgresConnectionString);
+            var dataSource = dataSourceBuilder.Build();
+            await using var conn = await dataSource.OpenConnectionAsync();
+
+            using var cmd = new Npgsql.NpgsqlCommand("DELETE FROM employee WHERE fiscal_code = @fiscalCode", conn);
+            cmd.Parameters.AddWithValue("@fiscalCode", fiscalCode);
+
+            await cmd.ExecuteNonQueryAsync();
+        }
+    
+
+        public async Task DeleteProductFromDB(int productId)
+        {
+            var dataSourceBuilder = new Npgsql.NpgsqlDataSourceBuilder(postgresConnectionString);
+            var dataSource = dataSourceBuilder.Build();
+            await using var conn = await dataSource.OpenConnectionAsync();
+
+            using var cmd = new Npgsql.NpgsqlCommand("DELETE FROM product WHERE id_product = @productId", conn);
+            cmd.Parameters.AddWithValue("@productId", productId);
+
+            await cmd.ExecuteNonQueryAsync();
+        }
     }
 }

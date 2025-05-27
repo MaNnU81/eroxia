@@ -2,12 +2,10 @@
 {
     internal class Program
     {
-        static   void  Main(string[] args)
+        static void Main(string[] args)
         {
-           var tui = new Tui(new BusinessLogic(new DBStorage()));
-            tui.Start();    
+            var tui = new Tui(new BusinessLogic(new DBStorage()));
+            tui.Start();
         }
-
-
     }
 }
