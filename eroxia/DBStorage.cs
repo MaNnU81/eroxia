@@ -11,7 +11,7 @@ namespace eroxia
 
     internal class DBStorage : IStorage
     {
-        public static string postgresConnectionString = "Host=localhost;Port=5432;Username=postgres;Password=Diva;Database=eroxia";  //cambia password in superpippo
+        public static string postgresConnectionString = "Host=localhost;Port=5432;Username=postgres;Password=superpippo;Database=eroxia";  //cambia password in superpippo
 
         public async Task<List<Product>> GetAllProductsFromDB()
         {

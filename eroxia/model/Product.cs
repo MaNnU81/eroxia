@@ -42,5 +42,11 @@ namespace eroxia.model
             Price = price;
             
         }
+
+        public override string? ToString()
+        {
+            return $"ID: {ProductId}, Nome: {Name}, Materiale: {Material}, Produttore: {Manufacturer}, Prezzo: {Price:C}, Colore: {Color}";
+        }
+
     }
 }

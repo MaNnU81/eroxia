@@ -6,7 +6,7 @@ namespace eroxia
     {
         public Task<List<Product>> GetAllProductsFromDB();
         public Task<List<Employee>> GetAllEmployeesFromDB();
-        public Task DeleteEmployeeFromDB(string fiscalCode);
-        public Task DeleteProductFromDB(int productId);
+        Task DeleteEmployeeFromDB(string fiscalCode);
+        Task DeleteProductFromDB(int productId);
     }
 }
